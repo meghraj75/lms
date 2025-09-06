@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Poppins:wght@100..900&family=Sora:wght@100..800&family=Unbounded:wght@200..900&display=swap");
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--Poppins-font);
+}
+
+:root {
+  --prim-color: #066dca;
+  --prim-light: #f3f9ff;
+  --text-color: #222e48;
+  --pera-color: #404a60;
+  --secondary-color: #f37739;
+  --white: #fff;
+  --black: #000;
+  --ChakraPetch-font: "Chakra Petch", sans-serif;
+  --Inter-font: "Inter", sans-serif;
+  --Poppins-font: "Poppins", sans-serif;
+  --Unbounded-font: "Unbounded", sans-serif;
+  --Sora-font: "Sora", sans-serif;
+  --transition-fast: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* Font utility classes */
+.sora-font {
+  font-family: var(--Sora-font);
+}
+.poppins-font {
+  font-family: var(--Poppins-font);
+}
+.inter-font {
+  font-family: var(--Inter-font);
+}
+.chakrapetch-font {
+  font-family: var(--ChakraPetch-font);
+}
+.unbounded-font {
+  font-family: var(--Unbounded-font);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.nav-logo {
+  font-family: var(--Unbounded-font);
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu li a {
+  position: relative;
+  z-index: 2; 
+  color: var(--text-color);
+  padding: 12px 10px;
+  transition: color var(--transition-fast);
+}
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  top: 0;   
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--prim-color);
+  transition: height var(--transition-fast);
+  z-index: 1;
+}
+
+.nav-menu li:hover::after {
+  height: 100%;
+}
+
+.nav-menu li:hover a {
+  color: #fff; 
+}
+
+.sidebar {
+  height: 100%;
+  width: 35%;
+  box-shadow: -10px -10px 20px #00000041;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: #fff;
+  z-index: 999;
+  padding: 30px;
+  background-color: var(--white);
+  transition: all 0.8s ease-in-out;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+@media screen and (max-width:991.98px) {
+    .sidebar {
+        width: 50%;
+    }
+}
+@media screen and (max-width:767.98px) {
+    .sidebar {
+        width: 75%;
+    }
+}
+@media screen and (max-width:575.98px) {
+    .sidebar {
+        width: 100%;
+    }
+}
