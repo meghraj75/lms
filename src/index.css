@@ -47,6 +47,54 @@ body {
   overflow-x: hidden;
 }
 
+.element1 {
+  animation: roatation 8s linear infinite;
+}
+@keyframes roatation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.element2 {
+  animation: scalation 8s linear infinite;
+}
+@keyframes scalation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.element3 {
+  animation: walking 10s linear infinite;
+}
+@keyframes walking {
+  0% {
+    transform: translate(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(0px) rotate(360deg);
+  }
+}
+.element4 {
+  animation: walking 10s linear infinite;
+}
+.element5 {
+  animation: scalation 8s linear infinite;
+}
+
 /* Navbar */
 .nav-logo {
   font-family: var(--Unbounded-font);
@@ -58,7 +106,7 @@ body {
 
 .nav-menu li a {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   color: var(--text-color);
   padding: 12px 10px;
   transition: color var(--transition-fast);
@@ -67,7 +115,7 @@ body {
 .nav-menu li::after {
   content: "";
   position: absolute;
-  top: 0;   
+  top: 0;
   left: 0;
   width: 100%;
   height: 0;
@@ -81,7 +129,7 @@ body {
 }
 
 .nav-menu li:hover a {
-  color: #fff; 
+  color: #fff;
 }
 
 .sidebar {
@@ -102,38 +150,43 @@ body {
   left: 0;
 }
 
-@media screen and (max-width:991.98px) {
-    .sidebar {
-        width: 50%;
-    }
+@media screen and (max-width: 991.98px) {
+  .sidebar {
+    width: 50%;
+  }
 }
-@media screen and (max-width:767.98px) {
-    .sidebar {
-        width: 75%;
-    }
+@media screen and (max-width: 767.98px) {
+  .sidebar {
+    width: 75%;
+  }
 }
-@media screen and (max-width:575.98px) {
-    .sidebar {
-        width: 100%;
-    }
+@media screen and (max-width: 575.98px) {
+  .sidebar {
+    width: 100%;
+  }
 }
 
 /* Hero section */
-.hero{
-    background-image: url(../public/Images/hero-bg.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.hero {
+  background-image: url(../public/Images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-.hero::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 350px;
-    background-image: url(../public/Images/cloud-shap-img1.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  background-image: url(../public/Images/cloud-shap-img1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media screen and (max-width:767.98px) {
+    .hero::after{
+        height: 250px;
+    }
 }

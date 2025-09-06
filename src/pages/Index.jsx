@@ -10,6 +10,7 @@ import element6 from '../../public/Images/element-06.png';
 const Index = () => {
   return (
     <>
+    {/* Hero */}
         <div className="hero flex justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px[8%] py-[50px] lg:py-[90px] h-screen relative">
             <div className="hero-content text-center mx-auto w-full flex flex-col items-center relative z-9">
                 <span className='text-[#076dcb] font-semibold chakrapetch-font'>
@@ -32,7 +33,16 @@ const Index = () => {
                     </button>
                 </div>
             </div>
+
+            <img src={element1} alt="shape-image" className="element1 hero-shape1 absolute left-30 top-30 object-contain hidden md:block" />
+            <img src={element2} alt="shape-image" className="element2 hero-shape2 absolute left-20 top-60 object-contain hidden md:block" />
+            <img src={element3} alt="shape-image" className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block" />
+            <img src={element4} alt="shape-image" className="element4 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block" />
+            <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+            <img src={element5} alt="shape-image" className="element5 hero-shape5 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex" />
+            <img src={element6} alt="shape-image" className="element6 hero-shape6 absolute right-50 top-20 w-[25px] hidden lg:flex" />
         </div>
+        {/* About */}
     </>
   )
 }
