@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsCheckAll } from "react-icons/bs";
 
 import element1 from "../../public/Images/element-01.png";
@@ -13,7 +13,7 @@ import about2 from "../../public/Images/about-img2.png";
 import user from "../../public/Images/user.png";
 import aboutimage from "../../public/Images/about-image.jpg";
 
-import whychoose from '../../public/Images/why-choose-us-image.jpg';
+import whychoose from "../../public/Images/why-choose-us-image.jpg";
 
 import featureicon1 from "../../public/Images/feature-icon1.png";
 import featureicon2 from "../../public/Images/feature-icon2.png";
@@ -23,7 +23,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+
+import CoursesData from "../CoursesData.json";
+import { Link } from "react-router-dom";
 const Index = () => {
+  // ✅ State fix
+  const categories = ["All", ...Object.keys(CoursesData.Courses)];
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const getCourses = () => {
+    if (activeCategory === "All") {
+      return Object.keys(CoursesData.Courses).flatMap((cat) => {
+        if (cat === "Marketing") return CoursesData.Courses[cat].slice(0, 2);
+        return CoursesData.Courses[cat].slice(0, 1);
+      });
+    }
+    return CoursesData.Courses[activeCategory] || [];
+  };
+
+  const courses = getCourses();
+
   return (
     <>
       {/* Hero */}
@@ -379,7 +398,114 @@ const Index = () => {
           </div>
         </div>
 
-        <img src={element5} alt="shape-image" className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex"
+        />
+      </div>
+      {/* Courses Section */}
+      <div className="courses px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[150px] bg-[#f3f9ff] relative">
+        <div className="flex justify-between items-center flex-col lg:flex-row w-full gap-3">
+          <h2 className="text-[#222e48] text-2xl sm:text-3xl md:text-4xl font-medium lg:w-1/2">
+            Explore 4,000+ Free Online Courses For Students
+          </h2>
+          <div className="lg:w-1/2 w-full">
+            <p className="text-[#576070] text-sm pb-2">
+              Welcome to our diverse and dynamic course catalog...
+            </p>
+            <Link to="/Courses">
+              <button className="bg-[#076dcd] hover:bg-black text-white px-5 py-3 rounded-full text-sm transition-colors duration-300">
+                See All Courses <i className="bi bi-arrow-up-right ps-2"></i>
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-3 my-8 bg-white p-5 rounded-xl shadow-xl">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-3 rounded-full text-sm font-medium transition ${
+                activeCategory === category
+                  ? "bg-blue-600 text-white"
+                  : "bg-[#f3f9ff] text-[#404a60]"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Courses Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {courses.length > 0 ? (
+            courses.map((course) => (
+              <div
+                key={course.title}
+                className="bg-white p-3 rounded-xl group hover:shadow-lg transition relative"
+              >
+                <div className="h-[230px] rounded-xl overflow-hidden relative bg-gray-200">
+                  <div className="absolute inset-0 animate-pulse bg-gray-200"></div>
+                  <img
+                    src={course.CourseImage}
+                    alt={course.title}
+                    loading="lazy"
+                    className="relative z-10 group-hover:scale-110 transition duration-500 h-full w-full object-cover"
+                    onLoad={(e) => {
+                      e.target.previousSibling.style.display = "none";
+                    }}
+                  />
+                </div>
+
+                <div className="p-3">
+                  <h4 className="text-[#222e48] font-bold sm:text-xl hover:text-[#006dca] transition-colors duration-500">
+                    {course.title}
+                  </h4>
+                  <div className="flex justify-between items-center my-2">
+                    <span>
+                      <i className="bi bi-camera-video pe-2"></i>
+                      {course.lessons} Lessons
+                    </span>
+                    <span>
+                      <i className="bi bi-bar-chart pe-2"></i>
+                      {course.level}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center my-2">
+                    <span>
+                      <i className="bi bi-star-fill text-yellow-400 pe-2"></i>
+                      {course.rating} ({course.reviews})
+                    </span>
+                    <div className="flex items-center">
+                      <img
+                        src={course.InstructorImage}
+                        alt={course.instructor}
+                        className="rounded-full h-10 w-10 object-cover me-2"
+                      />
+                      <span>{course.instructor}</span>
+                    </div>
+                  </div>
+                  <div className="border-t-2 border-dotted pt-5 flex justify-between items-center">
+                    <h4 className="text-[#f37739] text-2xl font-semibold">
+                      ${course.price}
+                    </h4>
+                    <button className="bg-[#076dcd] hover:bg-black text-white px-5 py-3 rounded-full text-sm transition-colors duration-300">
+                      {course.enrollLink}{" "}
+                      <i className="bi bi-arrow-up-right ps-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="col-span-full text-center text-gray-600">
+              No course available
+            </p>
+          )}
+        </div>
       </div>
       {/* Why Choose Us */}
       <div className="why-choose-us flex lg:flex-row-reverse flex-col justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative">
@@ -393,13 +519,24 @@ const Index = () => {
             Our Commitment to Excellence, Learn, Grow & Success.
           </h2>
           <p className="text-[#576070] pt-3 pb-8 text-sm ">
-            We are passionate about transforming lives through education.Founded with a vision to make learning acessible to all, we believe in the power of knowledge to...
+            We are passionate about transforming lives through education.
+            Founded with a vision to make learning accessible to all, we believe
+            in the power of knowledge to...
           </p>
 
           <ul className="flex flex-col gap-6 pb-6">
-            <li className="flex items-center gap-2 text-sm text-[#222e48]"><BsCheckAll className="size-7 text-[#076dcd]" />9/10 Average Satisfaction Rate</li>
-            <li className="flex items-center gap-2 text-sm text-[#222e48]"><BsCheckAll className="size-7 text-[#076dcd]" />96% Completiation Rate</li>
-            <li className="flex items-center gap-2 text-sm text-[#222e48]"><BsCheckAll className="size-7 text-[#076dcd]" />Friendly Environment & Expert Teaacher</li>
+            <li className="flex items-center gap-2 text-sm text-[#222e48]">
+              <BsCheckAll className="size-7 text-[#076dcd]" />
+              9/10 Average Satisfaction Rate
+            </li>
+            <li className="flex items-center gap-2 text-sm text-[#222e48]">
+              <BsCheckAll className="size-7 text-[#076dcd]" />
+              96% Completion Rate
+            </li>
+            <li className="flex items-center gap-2 text-sm text-[#222e48]">
+              <BsCheckAll className="size-7 text-[#076dcd]" />
+              Friendly Environment & Expert Teacher
+            </li>
           </ul>
 
           <div className="border-t-2 border-dotted border-[#c1c4cc] pt-5 flex items-center gap-8">
@@ -426,25 +563,24 @@ const Index = () => {
         <img
           src={element1}
           alt="shape-image"
-          className="absolute left-10 top-30 object-contain sm:block hidden"
+          className="absolute left-10 top-30 object-contain sm:block hidden animate-spin-slow"
         />
         <img
           src={element6}
           alt="shape-image"
-          className="absolute right-10 bottom-10 object-contain lg:block hidden"
+          className="absolute right-10 bottom-10 object-contain lg:block hidden animate-spin-slow"
         />
         <img
           src={element5}
           alt="shape-image"
-          className="absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden"
+          className="absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden animate-spin-slow"
         />
         <img
           src={element5}
           alt="shape-image"
-          className="absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden"
+          className="absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden animate-spin-slow"
         />
       </div>
-      
     </>
   );
 };
