@@ -1,4 +1,5 @@
 import React from "react";
+import { BsCheckAll } from "react-icons/bs";
 
 import element1 from "../../public/Images/element-01.png";
 import element2 from "../../public/Images/element-02.png";
@@ -12,12 +13,16 @@ import about2 from "../../public/Images/about-img2.png";
 import user from "../../public/Images/user.png";
 import aboutimage from "../../public/Images/about-image.jpg";
 
+import whychoose from '../../public/Images/why-choose-us-image.jpg';
+
 import featureicon1 from "../../public/Images/feature-icon1.png";
 import featureicon2 from "../../public/Images/feature-icon2.png";
 import featureicon3 from "../../public/Images/feature-icon3.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 const Index = () => {
   return (
     <>
@@ -236,7 +241,8 @@ const Index = () => {
                   Language Learning
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses teaching languages such as English, Spanish, French, Mandarin, Bangla etc.
+                  Courses teaching languages such as English, Spanish, French,
+                  Mandarin, Bangla etc.
                 </p>
               </div>
             </div>
@@ -252,7 +258,8 @@ const Index = () => {
                   Creative Arts & Design
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses on graphic design, digital art, photography, video editing...
+                  Courses on graphic design, digital art, photography, video
+                  editing...
                 </p>
               </div>
             </div>
@@ -268,7 +275,8 @@ const Index = () => {
                   Health & Fitness
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses On nutrition, fitness, traning, yoga, meditation, wellness coaching...
+                  Courses On nutrition, fitness, traning, yoga, meditation,
+                  wellness coaching...
                 </p>
               </div>
             </div>
@@ -284,19 +292,159 @@ const Index = () => {
                   Health & Fitness
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses On nutrition, fitness, traning, yoga, meditation, wellness coaching...
+                  Courses On nutrition, fitness, traning, yoga, meditation,
+                  wellness coaching...
                 </p>
               </div>
             </div>
           </SwiperSlide>
-          
         </Swiper>
 
-        <img src={element3} alt="shape" className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block" />
-        <img src={element5} alt="shape" className="element5 hero-shape3 absolute right-30 top-70 w-[20px] h-[20px] object-contain hidden sm:flex" />
-        <img src={element5} alt="shape" className="element5 hero-shape3 absolute left-10 bottom-50 w-[25px] h-[25px] object-contain hidden sm:flex" />
-        <img src={element6} alt="shape" className="element5 hero-shape3 absolute right-70 top-20  object-contain hidden lg:flex" />
+        <img
+          src={element3}
+          alt="shape"
+          className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block"
+        />
+        <img
+          src={element5}
+          alt="shape"
+          className="element5 hero-shape3 absolute right-30 top-70 w-[20px] h-[20px] object-contain hidden sm:flex"
+        />
+        <img
+          src={element5}
+          alt="shape"
+          className="element5 hero-shape3 absolute left-10 bottom-50 w-[25px] h-[25px] object-contain hidden sm:flex"
+        />
+        <img
+          src={element6}
+          alt="shape"
+          className="element5 hero-shape3 absolute right-70 top-20  object-contain hidden lg:flex"
+        />
       </div>
+      {/* Our Achivements */}
+      <div className="our-achievements grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 px-[2%] lg:px[12%] sm:px-[90px] lg:py-[120px] relative">
+        <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
+          <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+            <i className="bi bi-people"></i>
+          </div>
+          <div className="achievements-info">
+            <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">
+              1.4K
+            </h2>
+            <span className="text-[#404a60] text-sm lg:text-md">
+              Successfully Trained
+            </span>
+          </div>
+        </div>
+
+        <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
+          <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+            <i className="bi bi-camera-video"></i>
+          </div>
+          <div className="achievements-info">
+            <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">
+              2K
+            </h2>
+            <span className="text-[#404a60] text-sm lg:text-md">
+              Courses Completed
+            </span>
+          </div>
+        </div>
+
+        <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#fdf6f3] border border-[#ebecef] rounded-2xl">
+          <div className="achievements-icon text-[#f37739] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+            <i className="bi bi-hand-thumbs-up"></i>
+          </div>
+          <div className="achievements-info">
+            <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">
+              2.5K
+            </h2>
+            <span className="text-[#404a60] text-sm lg:text-md">
+              Satisfaction Completed
+            </span>
+          </div>
+        </div>
+
+        <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
+          <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
+          <div className="achievements-info">
+            <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">
+              5K
+            </h2>
+            <span className="text-[#404a60] text-sm lg:text-md">
+              Students Community
+            </span>
+          </div>
+        </div>
+
+        <img src={element5} alt="shape-image" className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex" />
+      </div>
+      {/* Why Choose Us */}
+      <div className="why-choose-us flex lg:flex-row-reverse flex-col justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative">
+        {/* Content (Right Side) */}
+        <div className="about-content flex flex-col lg:w-1/2 w-full">
+          <span className="text-[#076dcb] font-semibold sora-font pb-1">
+            <i className="bi bi-book pe-2"></i>
+            Why Choose Us
+          </span>
+          <h2 className="text-[#222e48] text-3xl md:text-4xl md:leading-13 sora-font font-semibold">
+            Our Commitment to Excellence, Learn, Grow & Success.
+          </h2>
+          <p className="text-[#576070] pt-3 pb-8 text-sm ">
+            We are passionate about transforming lives through education.Founded with a vision to make learning acessible to all, we believe in the power of knowledge to...
+          </p>
+
+          <ul className="flex flex-col gap-6 pb-6">
+            <li className="flex items-center gap-2 text-sm text-[#222e48]"><BsCheckAll className="size-7 text-[#076dcd]" />9/10 Average Satisfaction Rate</li>
+            <li className="flex items-center gap-2 text-sm text-[#222e48]"><BsCheckAll className="size-7 text-[#076dcd]" />96% Completiation Rate</li>
+            <li className="flex items-center gap-2 text-sm text-[#222e48]"><BsCheckAll className="size-7 text-[#076dcd]" />Friendly Environment & Expert Teaacher</li>
+          </ul>
+
+          <div className="border-t-2 border-dotted border-[#c1c4cc] pt-5 flex items-center gap-8">
+            <button
+              className="btn custom-btn bg-[#076dcd] hover:bg-black text-white px-5 py-3 rounded-full w-fit text-sm cursor-pointer transition-colors duration-300"
+              type="submit"
+            >
+              Read More
+              <i className="bi bi-arrow-up-right ps-2"></i>
+            </button>
+          </div>
+        </div>
+
+        {/* Image (Left Side) */}
+        <div className="about-image w-full lg:w-1/2 h-[550px] overflow-hidden group rounded-lg z-2">
+          <img
+            src={whychoose}
+            alt="about-user"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        {/* Shapes */}
+        <img
+          src={element1}
+          alt="shape-image"
+          className="absolute left-10 top-30 object-contain sm:block hidden"
+        />
+        <img
+          src={element6}
+          alt="shape-image"
+          className="absolute right-10 bottom-10 object-contain lg:block hidden"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden"
+        />
+      </div>
+      
     </>
   );
 };
