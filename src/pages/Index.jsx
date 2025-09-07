@@ -12,6 +12,12 @@ import about2 from "../../public/Images/about-img2.png";
 import user from "../../public/Images/user.png";
 import aboutimage from "../../public/Images/about-image.jpg";
 
+import featureicon1 from "../../public/Images/feature-icon1.png";
+import featureicon2 from "../../public/Images/feature-icon2.png";
+import featureicon3 from "../../public/Images/feature-icon3.png";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 const Index = () => {
   return (
     <>
@@ -93,38 +99,61 @@ const Index = () => {
             <i className="bi bi-book pe-2"></i>
             About StudIQ
           </span>
-          <h2 className="text-[#222e48] text-3xl md:text-5xl md:leading-13 sora-font font-semibold">The Place Where You Can Achieve</h2>
-          <p className="text-[#576070] pt-3 pb-8 text-sm sm:text-shadow-md">Welcome to StudIQ, where learning knows no bounds. Whether you're a student, professional, or lifelong learner...</p>
+          <h2 className="text-[#222e48] text-3xl md:text-5xl md:leading-13 sora-font font-semibold">
+            The Place Where You Can Achieve
+          </h2>
+          <p className="text-[#576070] pt-3 pb-8 text-sm sm:text-shadow-md">
+            Welcome to StudIQ, where learning knows no bounds. Whether you're a
+            student, professional, or lifelong learner...
+          </p>
 
           <ul className="flex flex-col gap-6 pb-10">
             <li className="flex gap-3 sm:flex-nowrap flex-wrap">
-                <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center p-4">
-                    <img src={about1} alt="about-image" className="object-contain" />
-                </div>
-                <div>
-                    <h4 className="text-[#222e48] font-semibold text-xl sora-font">Our Mission</h4>
-                    <p className="text-neutral-500 text-sm lg:text-md">
-                        Driven by a team of dedicated educator, technologists, and visionaries, we strive to create a supportive
-                    </p>
-                </div>
+              <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center p-4">
+                <img
+                  src={about1}
+                  alt="about-image"
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h4 className="text-[#222e48] font-semibold text-xl sora-font">
+                  Our Mission
+                </h4>
+                <p className="text-neutral-500 text-sm lg:text-md">
+                  Driven by a team of dedicated educator, technologists, and
+                  visionaries, we strive to create a supportive
+                </p>
+              </div>
             </li>
             <li className="flex gap-3 sm:flex-nowrap flex-wrap">
-                <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center p-4">
-                    <img src={about2} alt="about-image" className="object-contain" />
-                </div>
-                <div>
-                    <h4 className="text-[#222e48] font-semibold text-xl sora-font">Our Vision</h4>
-                    <p className="text-neutral-500 text-sm lg:text-md">
-                       A Professional seeking to upskill, or a lifelong learner exploring new horizons, we're here to accompany you every step of the way.
-                    </p>
-                </div>
+              <div className="bg-[#f3f9ff] rounded-[50%] min-w-[70px] min-h-[60px] flex justify-center p-4">
+                <img
+                  src={about2}
+                  alt="about-image"
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h4 className="text-[#222e48] font-semibold text-xl sora-font">
+                  Our Vision
+                </h4>
+                <p className="text-neutral-500 text-sm lg:text-md">
+                  A Professional seeking to upskill, or a lifelong learner
+                  exploring new horizons, we're here to accompany you every step
+                  of the way.
+                </p>
+              </div>
             </li>
           </ul>
 
           <div className="border-t-2 border-dotted border-[#c1c4cc] pt-5 flex items-center gap-8">
-            <button className="btn custom-btn bg-[#076dcd] hover:bg-black text-white px-5 py-3 rounded-full w-fit text-sm cursor-pointer transition-colors duration-300" type="submit">
-                Read More
-                <i className="bi bi-arrow-up-right ps-2"></i>
+            <button
+              className="btn custom-btn bg-[#076dcd] hover:bg-black text-white px-5 py-3 rounded-full w-fit text-sm cursor-pointer transition-colors duration-300"
+              type="submit"
+            >
+              Read More
+              <i className="bi bi-arrow-up-right ps-2"></i>
             </button>
 
             <div className="about-user flex">
@@ -137,12 +166,136 @@ const Index = () => {
           </div>
         </div>
         <div className="about-image w-full lg:w-1/2 h-[550px] overflow-hidden group rounded-lg z-2">
-            <img src={aboutimage} alt="about-user" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <img
+            src={aboutimage}
+            alt="about-user"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
         </div>
-        <img src={element1} alt="shape-image" className="element1 about-shape1 absolute left-10 top-30 object-contain sm:block hidden" />
-        <img src={element6} alt="shape-image" className="element5 about-shape7 absolute right-10 bottom-10 object-contain lg:block hidden" />
-        <img src={element5} alt="shape-image" className="element5 about-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden" />
-        <img src={element5} alt="shape-image" className="element5 about-shape5 absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden" />
+        <img
+          src={element1}
+          alt="shape-image"
+          className="element1 about-shape1 absolute left-10 top-30 object-contain sm:block hidden"
+        />
+        <img
+          src={element6}
+          alt="shape-image"
+          className="element5 about-shape7 absolute right-10 bottom-10 object-contain lg:block hidden"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 about-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 about-shape5 absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden"
+        />
+      </div>
+      {/* Features */}
+      <div className="feature flex justify-center items-center flex-col gap-10 px-[2%] lg:px[12%] sm:px-[8%] py-[90px] lg:py-[120px] relative">
+        <div className="feature-content z-2 flex flex-col text-center w-full lg:w-[60%] xl:w-[50%]">
+          <h2 className="text-[#222e48] text-2xl sm:text-3xl md:text-4xl md:leading-10 sora-font font-semibold">
+            Explore 5,000+ Free Online Courses For Students
+          </h2>
+          <p className="text-[#576070] pt-3 pb-8 text-sm sm:text-md">
+            Welcome to our diverse and dynamic course catalog. We're dedicated
+            to providing you with access to high-quality education.
+          </p>
+        </div>
+
+        {/* Swiper Slider */}
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          loop={true}
+          breakpoints={{
+            1399: {
+              slidesPerView: 3,
+            },
+            1199: {
+              slidesPerView: 2.5,
+            },
+            767: {
+              slidesPerView: 2,
+            },
+            0: {
+              slidesPerView: 1,
+            },
+          }}
+          className="feature-wrapper w-full"
+        >
+          <SwiperSlide>
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+              <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                <img src={featureicon1} alt="feature-icon" />
+              </div>
+              <div className="feature-info pt-8">
+                <h4 className="text-[#222e48] sora-font pb-2 text-xl font-semibold group-hover:text-white">
+                  Language Learning
+                </h4>
+                <p className="text-[#576070] text-sm group-hover:text-white">
+                  Courses teaching languages such as English, Spanish, French, Mandarin, Bangla etc.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+              <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                <img src={featureicon2} alt="feature-icon" />
+              </div>
+              <div className="feature-info pt-8">
+                <h4 className="text-[#222e48] sora-font pb-2 text-xl font-semibold group-hover:text-white">
+                  Creative Arts & Design
+                </h4>
+                <p className="text-[#576070] text-sm group-hover:text-white">
+                  Courses on graphic design, digital art, photography, video editing...
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+              <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                <img src={featureicon3} alt="feature-icon" />
+              </div>
+              <div className="feature-info pt-8">
+                <h4 className="text-[#222e48] sora-font pb-2 text-xl font-semibold group-hover:text-white">
+                  Health & Fitness
+                </h4>
+                <p className="text-[#576070] text-sm group-hover:text-white">
+                  Courses On nutrition, fitness, traning, yoga, meditation, wellness coaching...
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+              <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
+                <img src={featureicon3} alt="feature-icon" />
+              </div>
+              <div className="feature-info pt-8">
+                <h4 className="text-[#222e48] sora-font pb-2 text-xl font-semibold group-hover:text-white">
+                  Health & Fitness
+                </h4>
+                <p className="text-[#576070] text-sm group-hover:text-white">
+                  Courses On nutrition, fitness, traning, yoga, meditation, wellness coaching...
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          
+        </Swiper>
+
+        <img src={element3} alt="shape" className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block" />
+        <img src={element5} alt="shape" className="element5 hero-shape3 absolute right-30 top-70 w-[20px] h-[20px] object-contain hidden sm:flex" />
+        <img src={element5} alt="shape" className="element5 hero-shape3 absolute left-10 bottom-50 w-[25px] h-[25px] object-contain hidden sm:flex" />
+        <img src={element6} alt="shape" className="element5 hero-shape3 absolute right-70 top-20  object-contain hidden lg:flex" />
       </div>
     </>
   );
