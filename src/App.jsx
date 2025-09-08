@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Navbar from "./components/Navbar";
 import Index from "./pages/Index";
+import Footer from "./components/Footer";
 const App = () => {
 
   const location = useLocation();
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Index />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );

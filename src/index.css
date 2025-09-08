@@ -304,3 +304,25 @@ body {
   background-size: cover; */ 
 }
 
+/* Articles */
+
+.articles {
+  position: relative;
+}
+.articles::after{
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url(../public/Images/cloud-shap-img2.png);
+}
+
+@media screen and (max-width:991.98px) {
+  .articles::after{
+    top: -78px;
+    height: 250px;
+  }
+}
