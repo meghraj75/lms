@@ -404,7 +404,7 @@ const Index = () => {
           className="element-5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex"
         />
       </div>
-      {/* Courses Section */}
+      {/* Courses  */}
       <div className="courses px-[2%] lg:px-[12%] sm:px-[8%] py-[90px] lg:py-[150px] bg-[#f3f9ff] relative">
         <div className="flex justify-between items-center flex-col lg:flex-row w-full gap-3">
           <h2 className="text-[#222e48] text-2xl sm:text-3xl md:text-4xl font-medium lg:w-1/2">
@@ -428,7 +428,7 @@ const Index = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-3 rounded-full text-sm font-medium transition ${
+              className={`px-4 py-3 rounded-full text-sm font-medium transition cursor-pointer shadow-md ${
                 activeCategory === category
                   ? "bg-blue-600 text-white"
                   : "bg-[#f3f9ff] text-[#404a60]"
@@ -492,7 +492,10 @@ const Index = () => {
                     <h4 className="text-[#f37739] text-2xl font-semibold">
                       ${course.price}
                     </h4>
-                    <button className="bg-[#076dcd] hover:bg-black text-white px-5 py-3 rounded-full text-sm transition-colors duration-300">
+                    <button
+                      className="text-[#076dcd] hover:text-black font-medium cursor-pointer px-5 py-3 rounded-full w-fit text-sm transition-colors duration-300"
+                      type="button"
+                    >
                       {course.enrollLink}{" "}
                       <i className="bi bi-arrow-up-right ps-2"></i>
                     </button>
@@ -506,11 +509,56 @@ const Index = () => {
             </p>
           )}
         </div>
+
+        <img
+          src={element1}
+          alt="shape-image"
+          className="element1 hero-shape1 absolute left-30 top-30 object-contain hidden lg:block"
+        />
+        <img
+          src={element2}
+          alt="shape-image"
+          className="element2 hero-shape2 absolute left-20 top-60 object-contain hidden lg:block"
+        />
+        <img
+          src={element3}
+          alt="shape-image"
+          className="element3 hero-shape3 absolute right-96 bottom-10 z-2 object-contain hidden lg:block"
+        />
+        <img
+          src={element4}
+          alt="shape-image"
+          className="element3 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 hero-shape5 absolute right-30 top-70 w-[25px] h-[25px] object-contain hidden sm:flex"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 hero-shape6 absolute left-10 bottom-50 w-[25px] h-[25px] object-contain hidden sm:flex"
+        />
+        <img
+          src={element6}
+          alt="shape-image"
+          className="element5 hero-shape7 absolute right-50 top-20 hidden lg:flex"
+        />
       </div>
       {/* Why Choose Us */}
-      <div className="why-choose-us flex lg:flex-row-reverse flex-col justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative">
+      <div className="why-choose-us flex lg:flex-row flex-col justify-between items-center gap-10 px-[2%] lg:px-[12%] sm:px-[8%] py-[50px] lg:py-[90px] relative">
+        {/* Image (Left Side) */}
+        <div className="why-choose-us-image w-full lg:w-1/2 h-[500px] overflow-hidden group rounded-lg">
+          <img
+            src={whychoose}
+            alt="why-choose-us"
+            className="h-full w-full object-cover transition-all duration-500 group-hover:scale-110"
+          />
+        </div>
+
         {/* Content (Right Side) */}
-        <div className="about-content flex flex-col lg:w-1/2 w-full">
+        <div className="flex flex-col lg:w-1/2 w-full">
           <span className="text-[#076dcb] font-semibold sora-font pb-1">
             <i className="bi bi-book pe-2"></i>
             Why Choose Us
@@ -518,7 +566,7 @@ const Index = () => {
           <h2 className="text-[#222e48] text-3xl md:text-4xl md:leading-13 sora-font font-semibold">
             Our Commitment to Excellence, Learn, Grow & Success.
           </h2>
-          <p className="text-[#576070] pt-3 pb-8 text-sm ">
+          <p className="text-[#576070] pt-3 pb-8 text-sm">
             We are passionate about transforming lives through education.
             Founded with a vision to make learning accessible to all, we believe
             in the power of knowledge to...
@@ -550,37 +598,29 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Image (Left Side) */}
-        <div className="about-image w-full lg:w-1/2 h-[550px] overflow-hidden group rounded-lg z-2">
-          <img
-            src={whychoose}
-            alt="about-user"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
-
         {/* Shapes */}
         <img
-          src={element1}
+          src={element2}
           alt="shape-image"
-          className="absolute left-10 top-30 object-contain sm:block hidden animate-spin-slow"
+          className="element2 hero-shape-2 absolute left-20 top-60 object-contain md:block hidden "
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 hero-shape-5 absolute right-30 top-70 w-[20px] h-[20px] sm:flex hidden"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 hero-shape-6 absolute left-10 bottom-50 w-[25px] h-[25px] sm:flex hidden"
         />
         <img
           src={element6}
           alt="shape-image"
-          className="absolute right-10 bottom-10 object-contain lg:block hidden animate-spin-slow"
-        />
-        <img
-          src={element5}
-          alt="shape-image"
-          className="absolute left-10 bottom-50 w-[25px] h-[25px] sm:block hidden animate-spin-slow"
-        />
-        <img
-          src={element5}
-          alt="shape-image"
-          className="absolute right-30 top-70 w-[20px] h-[20px] sm:block hidden animate-spin-slow"
+          className="element5 hero-shape-7 absolute right-50 top-20 lg:flex hidden"
         />
       </div>
+      {/* Articles */}
     </>
   );
 };

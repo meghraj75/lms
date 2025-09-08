@@ -210,6 +210,32 @@ body {
   background-size: cover;
 }
 
+.feature-item:hover .feature-icon img {
+  animation: bounce 1s;
+}
+@keyframes  bounce {
+    0%,
+    20%,
+    53%,
+    100%{
+      transform: translateZ(0);
+    }
+    40%,
+    43%{
+      transform: translate3d(0, -30px, 0) scale(1.1);
+    }
+    80%{
+      transform: translateZ(0) scaleY(0.95);
+    }
+    90%{
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }
+}
+
+.feature-wrapper {
+  padding: 30px 0 !important;
+}
+
 /* Our Achievements */
 
 .our-achievements::after{
@@ -247,6 +273,22 @@ body {
   }
 }
 
+/* Courses */
+
+.courses::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url(../public/Images/cloud-shap-img2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 0;
+}
+
 /* why-choose-us */
 
 .why-choose-us::after{
@@ -256,5 +298,9 @@ body {
   left: 0;
   width: 100%;
   height: 250px;
-  background-image: url(../public/Images/cloud-shap-img1.png);
+  /* background-image: url(../public/Images/cloud-shap-img1.png); */
+  /* background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */ 
 }
+
