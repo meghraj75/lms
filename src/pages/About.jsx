@@ -20,7 +20,45 @@ import choseImage1 from "../../public/Images/choose-icon1.png";
 import choseImage2 from "../../public/Images/choose-icon2.png";
 import choseImage3 from "../../public/Images/choose-icon3.png";
 import choseImage4 from "../../public/Images/choose-icon4.png";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import testiImage1 from "../../public/Images/testi-img1.png";
+import testiImage2 from "../../public/Images/testi-img2.png";
+import testiImage3 from "../../public/Images/testi-img3.png";
+
+import quoteImage from '../../public/Images/quote-icon.png';
+
 const About = () => {
+  const testimonials = [
+    {
+      ratings: 4.5,
+      text: "I've taken several courses through, and each one has exceeded my expectations. I've gained valuable skills that have helped me advance in my career. Highly recommend!",
+      author: "John D",
+      role: "Graphic Designer",
+      img: testiImage1,
+    },
+    {
+      ratings: 4.5,
+      text: "I was initially skeptical about online learning, but changed my perspective completely. The courses are well-designed, and the flexibility to learn at my own pace is invaluable.",
+      author: "Sarah L",
+      role: "UI/UX Designer",
+      img: testiImage2,
+    },
+    {
+      ratings: 4.5,
+      text: "I was initially skeptical about online learning, but changed my perspective completely. The courses are well-designed, and the flexibility to learn at my own pace is invaluable.",
+      author: "Alena",
+      role: "Front End Developer",
+      img: testiImage3,
+    },
+  ];
+
   return (
     <>
       <div className="section-banner bg-[#f3f9ff] h-[400px] py-[50px] lg:py-[90px] flex flex-col justify-center items-center relative">
@@ -363,8 +401,113 @@ const About = () => {
           className="element5 hero-shape-7 absolute right-50 top-20 lg:flex hidden"
         />
       </div>
+      {/* Testmonials */}
+      <div className="texti px-[2%] lg:px-[12%] sm:px-[8%] lg:py-[90px] flex flex-col gap-3 relative">
+        <div className="feature-content z-2 flex flex-col text-center w-full lg:w-[60%] mx-auto xl:w-[50%]">
+          <span className="text-[#076dcb] font-semibold sora-font pb-1">
+            <i className="bi bi-book pe-2"></i>
+            Testimonials from Happy Learners
+          </span>
+          <h2 className="text-[#222e48] text-2xl sm:text-3xl md:text-4xl md:leading-10 sora-font font-semibold">
+            What Our Students Says
+          </h2>
+          <p className="text-[#576070] pt-3 pb-8 text-sm sm:text-md">
+            Our Students Success stories speak volumes . here just few
+            Testimoials from our students ...
+          </p>
+        </div>
+      </div>
 
-      
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={20}
+        slidesPerView={2}
+        loop={true}
+        navigation={{
+          nextEl: ".swiper-testi-next",
+          prevEl: ".swiper-testi-prev",
+        }}
+        breakpoints={{
+          1199: { slidesPerView: 2 },
+          767: { slidesPerView: 1.5 },
+          0: { slidesPerView: 1 },
+        }}
+        className="w-full"
+      >
+        {testimonials.map((testi, index) => (
+          <SwiperSlide key={index}>
+            <div className="bg-[#f3faff] rounded-xl p-5">
+              <div className="testu-icons flex gap-3 text-[#ff9f29] mb-2">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <i
+                    className={`bi ${
+                      i < Math.floor(testi.ratings)
+                        ? "bi-star-fill"
+                        : i < testi.ratings
+                        ? "bi-star-half"
+                        : "bi-star"
+                    }`}
+                    key={i}
+                  ></i>
+                ))}
+              </div>
+              <p className="text-[#222e48] text-md sm:text-lg xl:text-xl mb-4">
+                {testi.text}
+              </p>
+              <div className="testi-section border-t gap-5 border-dashed border-[#ebecef]  flex justify-between items-center">
+                <div className="testi-content mt-5 flex gap-5 items-center">
+                  <div className="testi-author">
+                    <img src={testi.img} alt={testi.author} />
+                  </div>
+                  <div className="testi-text">
+                    <h2 className="text-[#222e48] font-semibold text-lg md:text-xl sora-font">
+                      {testi.author}
+                    </h2>
+                    <p className="text-[#222e48] font-medium chakrpetch-font">
+                      {testi.role}
+                    </p>
+                  </div>
+                </div>
+                <div className="quote-img">
+                  <img src={quoteImage} className="opacity-25 mt-5" alt="" />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="flex swiper-btn flex-col items-center mt-6 justify-center">
+        <div className="flex gap-3">
+          <div className="swiper-testi-prev cursor-pointer">
+            <i className="bi bi-arrow-left"></i>
+          </div>
+          <div className="swiper-testi-next cursor-pointer">
+            <i className="bi bi-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <img
+          src={element1}
+          alt="shape-image"
+          className="element1 hero-shape1 absolute left-30 top-30 object-contain hidden md:block"
+        />
+         <img
+          src={element4}
+          alt="shape-image"
+          className="element4 hero-shape4 absolute right-40 bottom-50 z-2 object-contain hidden lg:block"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 hero-shape5 absolute right-30 top-70 w-[20px] h-[20px] hidden sm:flex"
+        />
+        <img
+          src={element5}
+          alt="shape-image"
+          className="element5 hero-shape5 absolute left-10 bottom-50 w-[25px] h-[25px] hidden sm:flex"
+        />
     </>
   );
 };
