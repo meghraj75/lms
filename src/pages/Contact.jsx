@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import element1 from "../../public/Images/element-01.png";
 import element2 from "../../public/Images/element-02.png";
@@ -19,6 +19,19 @@ import student6 from "../../public/Images/student-img-06.png";
 import { faHome } from "@fortawesome/free-regular-svg-icons";
 
 const Contact = () => {
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    setSubmitted(true);
+    e.target.reset();
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+  };
+
   return (
     <>
       <div className="section-banner bg-[#f3f9ff] h-[400px] py-[50px] lg:py-[90px] flex flex-col justify-center items-center relative">
@@ -247,10 +260,14 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-form z-10 lg:w-1/2 w-full bg-white p-3 rounded-2xl">
-          <form className="w-full bg-[#f3f9ff] border border-[#f3f9ff] p-5 sm:p-10 rounded-2xl space-y-4">
+                    <form
+            onSubmit={handleSubmit}
+            className="w-full bg-[#f3f9ff] border border-[#f3f9ff] p-5 sm:p-10 rounded-2xl space-y-4"
+          >
             <h3 className="sora-font text-2xl font-semibold text-[#222e48] border-b-2 border-[#ebecef] border-dashed pb-5">
               Get In Touch
             </h3>
+
             <div>
               <input
                 type="text"
@@ -283,7 +300,15 @@ const Contact = () => {
                 Send Message
               </button>
             </div>
+
+            {/* Thank You Message */}
+            {submitted && (
+              <p className="text-green-600 font-medium mt-3 text-center animate-fadeIn">
+                Thank you! Your message has been sent successfully.
+              </p>
+            )}
           </form>
+
         </div>
       </div>
     </>
