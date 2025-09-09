@@ -5,11 +5,13 @@ import Navbar from "./components/Navbar";
 import Index from "./pages/Index";
 import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
-import About from './/pages/About'
-const App = () => {
+import SignUp from "./pages/SignUp"; 
+import About from "./pages/About";
+import Course from "./pages/Course";
 
+const App = () => {
   const location = useLocation();
-  const isHome = location.pathname === "/"
+  const isHome = location.pathname === "/";
 
   return (
     <>
@@ -18,7 +20,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} /> 
           <Route path="/About" element={<About />} />
+          <Route path="/courses" element={<Course />} />
         </Routes>
         <Footer />
       </div>
