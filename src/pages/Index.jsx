@@ -264,8 +264,7 @@ const Index = () => {
                   Language Learning
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses teaching languages such as English, Spanish, French,
-                  Mandarin, Bangla etc.
+                  Courses teaching languages such as English, Spanish, Bangla etc.
                 </p>
               </div>
             </div>
