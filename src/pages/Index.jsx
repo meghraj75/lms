@@ -314,8 +314,7 @@ const Index = () => {
                   Health & Fitness
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses On nutrition, fitness, traning, yoga, meditation,
-                  wellness coaching...
+                  Courses On nutrition, fitness, traning, yoga, meditation...
                 </p>
               </div>
             </div>
