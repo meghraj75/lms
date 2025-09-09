@@ -8,6 +8,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp"; 
 import About from "./pages/About";
 import Course from "./pages/Course";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 const App = () => {
   const location = useLocation();
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} /> 
           <Route path="/About" element={<About />} />
           <Route path="/courses" element={<Course />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
