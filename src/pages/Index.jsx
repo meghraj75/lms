@@ -386,7 +386,7 @@ const Index = () => {
 
         <div className="achievements-item z-2 h-[250px] flex justify-center items-center flex-col p-5 text-center w-full bg-[#f1f6fd] border border-[#ebecef] rounded-2xl">
           <div className="achievements-icon text-[#006dca] bg-white w-[70px] min-h-[70px] flex justify-center items-center rounded-[50%] mx-auto text-3xl p-1 mb-8 shadow-lg">
-            <FontAwesomeIcon icon={faUser} />
+            <i className="bi bi-person"></i>
           </div>
           <div className="achievements-info">
             <h2 className="text-[#222e48] text-3xl font-bold sora-font uppercase">
