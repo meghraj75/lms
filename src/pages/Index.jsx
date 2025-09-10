@@ -255,7 +255,7 @@ const Index = () => {
           className="feature-wrapper w-full"
         >
           <SwiperSlide>
-            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-10 px-5 transition-all duration-300">
               <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
                 <img src={featureicon1} alt="feature-icon" />
               </div>
@@ -271,7 +271,7 @@ const Index = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-10 px-5 transition-all duration-300">
               <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
                 <img src={featureicon2} alt="feature-icon" />
               </div>
@@ -280,15 +280,14 @@ const Index = () => {
                   Creative Arts & Design
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses on graphic design, digital art, photography, video
-                  editing...
+                  Courses on graphic design, digital art, photography, video , audio etc...
                 </p>
               </div>
             </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-10 px-5 transition-all duration-300">
               <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
                 <img src={featureicon3} alt="feature-icon" />
               </div>
@@ -297,15 +296,14 @@ const Index = () => {
                   Health & Fitness
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses On nutrition, fitness, traning, yoga, meditation,
-                  wellness coaching...
+                  Courses On nutrition, fitness, traning, yoga, meditation, youga to sent...
                 </p>
               </div>
             </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-12 px-5 transition-all duration-300">
+            <div className="feature-item hover:bg-[#006dca] group flex justify-center items-start flex-col bg-white shadow-xl rounded-xl py-10 px-5 transition-all duration-300">
               <div className="feature-icon w-fit bg-white rounded-[50%] p-5">
                 <img src={featureicon3} alt="feature-icon" />
               </div>
@@ -314,7 +312,7 @@ const Index = () => {
                   Health & Fitness
                 </h4>
                 <p className="text-[#576070] text-sm group-hover:text-white">
-                  Courses On nutrition, fitness, traning, yoga, meditation...
+                  Courses On nutrition, fitness, traning, yoga, meditation...youga to sent...
                 </p>
               </div>
             </div>
