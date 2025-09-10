@@ -22,7 +22,7 @@ import featureicon3 from "../../public/Images/feature-icon3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faMessage, faUser, faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import { faCalendar, faMessage, faUserCircle } from "@fortawesome/free-regular-svg-icons";
 
 import CoursesData from "../CoursesData.json";
 import { Link } from "react-router-dom";
