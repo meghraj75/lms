@@ -59,7 +59,7 @@ const Navbar = () => {
 
         {/* Right side */}
         <div className="nav-right flex gap-2 items-center">
-          <div className="user text-xl min-h-[40px] bg-white hover:bg-[#006dca] hover:text-white transition-colors duration-300 shadow-xl p-1 flex justify-center items-center rounded-full cursor-pointer">
+          <div className="user text-xl min-h-[40px] bg-white hover:bg-[#006dca] hover:text-white transition-colors duration-300 shadow-xl p-2 flex justify-center items-center rounded-xl cursor-pointer">
             <Link to="/SignIn">
               <FontAwesomeIcon icon={faCircleUser} />
             </Link>
