@@ -140,12 +140,6 @@ netlify deploy
 
 ---
 
-## 📝 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 📞 Contact
 
 * GitHub: [amdadislam01](https://github.com/amdadislam01)
