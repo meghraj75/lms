@@ -146,5 +146,4 @@ netlify deploy
 * Email: [amdad20063@gmail.com](mailto:amdad20063@gmail.com) 
 
 ---
-
 *Prepared with ❤️ for MD. Amdad Islam*
