@@ -1,6 +1,5 @@
 # Learning Management System
 
-
 > **Project:** Learning Management System (Frontend)
 >
 > **Author:** MD. Amdad Islam
