@@ -1,4 +1,4 @@
-# Learning Management Syste
+# Learning Management System
 
 > **Project:** Learning Management System (Frontend)
 >
