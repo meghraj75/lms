@@ -3,7 +3,7 @@
 > **Project:** Learning Management System (Frontend)
 ></br>
 > **Author:** MD. Amdad Islam
->
+></br>
 > **Repository:** [https://github.com/amdadislam01/learning-management-system](https://github.com/amdadislam01/learning-management-system)
 
 ---
