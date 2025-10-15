@@ -217,7 +217,6 @@ const Footer = () => {
         <div className="border-t border-[#006dca] py-6">
             <p className="text-center text-md text-[#404a60]">
                 © 2025 copyright All Rights Reserved-
-                <a href="https://amdadislam.netlify.app/" className="font-medium hover:text-[#006dca] transition-colors duration-300 ml-1">Developed By Amdad Islam</a> 
             </p>
         </div>
       </div>
